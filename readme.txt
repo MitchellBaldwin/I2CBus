@@ -1,10 +1,8 @@
+NOTE for users of the Visual Micro extension to Visual Studio:
+
 Arduino Compatible Cross Platform C++ Library Project : For more information see http://www.visualmicro.com
 
-This project works exactly the same way as an Arduino library should work. Code should be in the \src folder, code in deep sub folders below the \src folder is also supported.
-
-The \src folder, if it exists, will be added as a compiler -I include path, otherwise the library folder will be a compiler -I include path.
-
-Very old Arduino libraries have code in the library folder and private code in the \utility sub folder. They should be converted to this new format using \src and library.properties
+This project should work just as an Arduino library should work. Code is in the \src folder.
 
 Add this project to any solution that contains an Arduino project and #include <headers.h> in code as you would any normal Arduino library headers. 
 
