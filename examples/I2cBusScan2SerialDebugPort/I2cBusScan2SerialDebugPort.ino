@@ -8,31 +8,31 @@
 */
 #include <I2CBus.h>
 
-#include <HardwareSerial.h>
-HardwareSerial USBSerial(0);				// Uses the same UART device as "Serial" but does not allow use of "Serial"?
+//#include <HardwareSerial.h>
+//HardwareSerial Serial(0);	// Uses the same UART device as "Serial" but does not allow use of "Serial"?
 
 // the setup function runs once when you press reset or power the board
 void setup() {
 	
-	USBSerial.begin(115200);
-	if (!USBSerial)
+	Serial.begin(115200);
+	if (!Serial)
 	{
-		while (!USBSerial);		// Wait for serial debug port
+		while (!Serial);		// Wait for serial debug port
 	}
 	else
 	{
-		USBSerial.println("");
-		USBSerial.println("Serial debug port initialized");
+		Serial.println("");
+		Serial.println("Serial debug port initialized");
 	}
 
-	if (I2CBus.Init(GPIO_NUM_21, GPIO_NUM_26))
+	if (I2CBus.Init(GPIO_NUM_43, GPIO_NUM_44))
 	{
 		I2CBus.Scan();
-		USBSerial.println(I2CBus.GetActiveI2CAddressesString());
+		Serial.println(I2CBus.GetActiveI2CAddressesString());
 	}
 	else
 	{
-		USBSerial.println("Error initializing I2C bus...");
+		Serial.println("Error initializing I2C bus...");
 	}
 
 }

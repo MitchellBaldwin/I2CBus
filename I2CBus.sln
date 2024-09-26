@@ -50,4 +50,8 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01E66002-E266-43F5-8056-713092B6E1A5}
 	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		I2CBus.vcxitems*{5a4b0045-cda2-4498-8290-e4791807b4a3}*SharedItemsImports = 9
+		I2CBus.vcxitems*{8a8e8789-9999-4ec8-a6ef-179085d8ebfd}*SharedItemsImports = 4
+	EndGlobalSection
 EndGlobal
